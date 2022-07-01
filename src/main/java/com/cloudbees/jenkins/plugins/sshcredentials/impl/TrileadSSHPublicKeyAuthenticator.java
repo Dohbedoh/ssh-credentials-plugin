@@ -139,7 +139,7 @@ public class TrileadSSHPublicKeyAuthenticator extends SSHAuthenticator<Connectio
     /**
      * {@inheritDoc}
      */
-    @Extension
+    @Extension(optional = true)
     public static class Factory extends SSHAuthenticatorFactory {
 
         /**

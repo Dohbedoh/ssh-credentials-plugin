@@ -110,8 +110,32 @@
     </dependency>
     <!-- plugin dependencies -->
     <dependency>
-      <groupId>org.jenkins-ci.plugins</groupId>
-      <artifactId>trilead-api</artifactId>
+      <groupId>org.jenkins-ci</groupId>
+      <artifactId>trilead-ssh2</artifactId>
+      <version>build-217-jenkins-27</version>
+      <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <groupId>net.i2p.crypto</groupId>
+          <artifactId>eddsa-0.3.0</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.connectbot.jbcrypt</groupId>
+          <artifactId>jbcrypt</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.kohsuke</groupId>
+      <artifactId>trilead-putty-extension</artifactId>
+      <version>1.2</version>
+      <optional>true</optional>
+      <exclusions>
+        <exclusion>
+          <groupId>org.jenkins-ci</groupId>
+          <artifactId>trilead-ssh2</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
